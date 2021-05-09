@@ -3,6 +3,7 @@ language: cpp
 script:
 - cmake .
 - make
+- ./runUnitTests
 
 addons:
   apt:
