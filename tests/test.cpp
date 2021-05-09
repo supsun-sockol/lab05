@@ -13,7 +13,7 @@ TEST(Account, test2)
 	Account A(1, 5);
 	A.Lock();
 	A.ChangeBalance(3);
-	EXPECT_EQ(A.GetBalance(), 3);
+	EXPECT_EQ(A.GetBalance(), 8);
 }
 TEST(Account, test3)
 {
