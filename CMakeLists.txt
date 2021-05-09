@@ -12,5 +12,5 @@ add_library(lib1 Account.h Account.cpp)
 add_library(lib2 Transaction.h Transaction.cpp)
 add_executable(runUnitTests tests/test.cpp)
 
-target_link_libraries(runUnitTests gtest gtast_main)
+target_link_libraries(runUnitTests gtest gtest_main)
 add_test( runUnitTests runUnitTests )
