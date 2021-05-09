@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.2)
-
-add_definitions(-std=c++0x)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project(bank)
 
@@ -11,7 +11,7 @@ include_directories(tests)
 
 add_library(lib1 Account.h Account.cpp)
 add_library(lib2 Transaction.h Transaction.cpp)
-add_executable(test test.cpp)
+add_executable(test tests/test.cpp)
 
 target_link_libraries(test gtest gtast_main)
 add_test( test test )

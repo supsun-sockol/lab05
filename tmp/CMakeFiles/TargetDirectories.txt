@@ -1,4 +1,0 @@
-/home/andrey/Berendei-Jr/workspace/projects/lab05/banking/tmp/CMakeFiles/rebuild_cache.dir
-/home/andrey/Berendei-Jr/workspace/projects/lab05/banking/tmp/CMakeFiles/lib2.dir
-/home/andrey/Berendei-Jr/workspace/projects/lab05/banking/tmp/CMakeFiles/edit_cache.dir
-/home/andrey/Berendei-Jr/workspace/projects/lab05/banking/tmp/CMakeFiles/lib1.dir
