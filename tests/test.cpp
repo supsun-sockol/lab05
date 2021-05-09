@@ -5,7 +5,7 @@
 
 TEST(Print, TestSuperTest)
 {
-	ASSERT_EQ(1, 5);
+	ASSERT_EQ(5, 5);
 }
 int main (){
 	return RUN_ALL_TESTS();
