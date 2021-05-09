@@ -1,7 +1,7 @@
-#include <Account.h>
+#include "../Account.h">
 //#include <Transaction.h>
 
-#include <gtest/gtest.h>
+#include "gtest/gtest.h"
 
 TEST(Print, TestSuperTest)
 {
