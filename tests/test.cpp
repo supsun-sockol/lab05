@@ -5,7 +5,8 @@
 
 TEST(Print, TestSuperTest)
 {
-	Account A(3, 2);
 	ASSERT_EQ(1, 5);
 }
-
+int main (){
+	return RUN_ALL_TESTS();
+}
