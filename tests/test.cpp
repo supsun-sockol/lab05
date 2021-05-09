@@ -6,6 +6,6 @@
 TEST(Print, TestSuperTest)
 {
 	Account A(3, 2);
-	ASSERT_EQ(A.GetBalance(), 5);
+	ASSERT_EQ(1, 5);
 }
 
