@@ -10,7 +10,7 @@ include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
 add_library(lib1 Account.h Account.cpp)
 add_library(lib2 Transaction.h Transaction.cpp)
-add_executable(test tests/test.cpp)
+add_executable(runUnitTests tests/test.cpp)
 
-target_link_libraries(test gtest gtast_main)
-add_test( test test )
+target_link_libraries(runUnitTests gtest gtast_main)
+add_test( runUnitTests runUnitTests )
