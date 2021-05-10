@@ -46,11 +46,12 @@ TEST(Transaction, test2)
 TEST(Transaction, test3)
 {
 	Transaction B;
-	Account A1(1, 1000);
+	Account A1(1, 2000);
 	Account A2(2, 200);
+	B.set_fee(100);
 	B.Make(A1, A2, 400);
-	EXPECT_EQ(A1.GetBalance(), 600);
-	EXPECT_EQ(A2.GetBalance(), 599);
+	EXPECT_EQ(A1.GetBalance(), 1600);
+	EXPECT_EQ(A2.GetBalance(), 500);
 }
 TEST(Transaction, test4)
 {
