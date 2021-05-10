@@ -1,5 +1,5 @@
 #include "../Account.cpp"
-#include "../Transaction.h"
+#include "../Transaction.cpp"
 
 #include "gtest/gtest.h"
 
