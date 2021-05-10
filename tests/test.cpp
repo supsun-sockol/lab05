@@ -49,8 +49,8 @@ TEST(Transaction, test3)
 	Account A1(1, 1000);
 	Account A2(2, 200);
 	B.Make(A1, A2, 400);
-	EXPECT_EQ(A1.GetBalance(), 599);
-	EXPECT_EQ(A2.GetBalance(), 600);
+	EXPECT_EQ(A1.GetBalance(), 600);
+	EXPECT_EQ(A2.GetBalance(), 599);
 }
 TEST(Transaction, test4)
 {
@@ -58,6 +58,7 @@ TEST(Transaction, test4)
 	Account A1(1, 1000);
 	Account A2(2, 200);
 	EXPECT_ANY_THROW(B.Make(A1, A2, -400));
+	EXPECT_ANY_THROW(B.Make(A1, A2, 40));
 }
 TEST(Transaction, test5)
 {
