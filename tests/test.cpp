@@ -39,13 +39,13 @@ TEST(Transaction, test1)
 }
 TEST(Transaction, test2)
 {
-	Transaction B();
+	Transaction B;
 	B.set_fee(5);
 	EXPECT_EQ(B.fee(), 5);
 }
 TEST(Transaction, test3)
 {
-	Transaction B();
+	Transaction B;
 	Account A1(1, 5);
 	Account A2(2, 2);
 	B.Make(A1, A2, 2);
