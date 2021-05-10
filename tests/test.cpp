@@ -46,11 +46,36 @@ TEST(Transaction, test2)
 TEST(Transaction, test3)
 {
 	Transaction B;
-	Account A1(1, 10);
-	Account A2(2, 2);
-	B.Make(A1, A2, 4);
-	EXPECT_EQ(A1.GetBalance(), 5);
-	EXPECT_EQ(A2.GetBalance(), 6);
+	Account A1(1, 1000);
+	Account A2(2, 200);
+	B.Make(A1, A2, 400);
+	EXPECT_EQ(A1.GetBalance(), 599);
+	EXPECT_EQ(A2.GetBalance(), 600);
+}
+TEST(Transaction, test4)
+{
+	Transaction B;
+	Account A1(1, 1000);
+	Account A2(2, 200);
+	EXPECT_ANY_THROW(B.Make(A1, A2, -400));
+}
+TEST(Transaction, test5)
+{
+	Transaction B;
+	Account A1(1, 1000);
+	Account A2(2, 200);
+	B.set_fee(300);
+	EXPECT_FALSE(B.Make(A1, A2, 400));
+}
+TEST(Transaction, test4)
+{
+	Transaction B;
+	Account A1(1, 1000);
+	Account A2(2, 200);
+	EXPECT_ANY_THROW(B.Make(A1, A2, -400));
+}
+int main(){
+	return RUN_ALL_TESTS();
 }
 int main(){
 	return RUN_ALL_TESTS();
