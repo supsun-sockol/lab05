@@ -34,8 +34,8 @@ TEST(Account, test5)
 }
 TEST(Transaction, test1)
 {
-	Transaction B();
-	EXPECT_EQ(B.fee(), 1);
+	Transaction();
+	EXPECT_EQ(Transaction.fee(), 1);
 }
 TEST(Transaction, test2)
 {
