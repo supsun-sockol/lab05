@@ -1,7 +1,6 @@
 language: cpp
 
 script:
-- cmake -DCOVERAGE=1 .
 - cmake .
 - make
 - ./runUnitTests
