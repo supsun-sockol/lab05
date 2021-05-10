@@ -67,7 +67,7 @@ TEST(Transaction, test5)
 	B.set_fee(300);
 	EXPECT_FALSE(B.Make(A1, A2, 400));
 }
-TEST(Transaction, test4)
+TEST(Transaction, test6)
 {
 	Transaction B;
 	Account A1(1, 1000);
