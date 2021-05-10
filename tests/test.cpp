@@ -58,7 +58,7 @@ TEST(Transaction, test4)
 	Account A1(1, 1000);
 	Account A2(2, 200);
 	EXPECT_ANY_THROW(B.Make(A1, A2, -400));
-	EXPECT_ANY_THROW(B.Make(A1, A2, 40));
+	EXPECT_ANY_THROW(B.Make(A1, A2, 60));
 }
 TEST(Transaction, test5)
 {
