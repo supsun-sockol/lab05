@@ -4,6 +4,8 @@ script:
 - cmake .
 - make
 - ./runUnitTests
+before_install:
+  - pip install --user cpp-coveralls
 
 addons:
   apt:
@@ -15,3 +17,5 @@ addons:
       - mingw-w64
 after_success:
   coveralls
+after_success:
+  - coveralls --root . -E ".*gtest.*" -E ".*CMakeFiles.*"
