@@ -50,8 +50,8 @@ TEST(Transaction, test3)
 	Account A2(2, 200);
 	B.set_fee(100);
 	B.Make(A1, A2, 400);
-	EXPECT_EQ(A1.GetBalance(), 1600);
-	EXPECT_EQ(A2.GetBalance(), 500);
+	EXPECT_EQ(A1.GetBalance(), 1500);
+	EXPECT_EQ(A2.GetBalance(), 600);
 }
 TEST(Transaction, test4)
 {
@@ -75,6 +75,12 @@ TEST(Transaction, test6)
 	Account A1(1, 1000);
 	Account A2(2, 200);
 	EXPECT_ANY_THROW(B.Make(A1, A2, -400));
+}
+TEST(Transaction, test7)
+{
+	Transaction B;
+	Account A1(1, 1000);
+	EXPECT_ANY_THROW(B.Make(A1, A1, 400));
 }
 int main(){
 	return RUN_ALL_TESTS();
