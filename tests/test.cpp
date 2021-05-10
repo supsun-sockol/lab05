@@ -32,6 +32,26 @@ TEST(Account, test5)
 	Account A(1, 5);
 	EXPECT_ANY_THROW(A.ChangeBalance(3));
 }
+TEST(Transaction, test1)
+{
+	Transaction B();
+	EXPECT_EQ(B.fee(), 1);
+}
+TEST(Transaction, test2)
+{
+	Transaction B();
+	B.set_fee(5);
+	EXPECT_EQ(B.fee(), 5);
+}
+TEST(Transaction, test3)
+{
+	Transaction B();
+	Account A1(1, 5);
+	Account A2(2, 2);
+	B.Make(A1, A2, 2);
+	EXPECT_EQ(A1.GetBalance(), 2);
+	EXPECT_EQ(A2.GetBalance(), 4);
+}
 int main(){
 	return RUN_ALL_TESTS();
 }
