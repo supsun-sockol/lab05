@@ -13,3 +13,5 @@ addons:
       - cmake
       - cmake-data
       - mingw-w64
+after_success:
+  coveralls
